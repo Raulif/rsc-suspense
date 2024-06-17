@@ -19,8 +19,8 @@ export default async function Devices() {
       {devices.length ? <DevicesTable devices={devices} /> : null}
       <p>
         This screen uses a page-level Suspense boundary (via loading.tsx), but the data loading is so fast you probably
-        didn't notice it unless you were looking hard and got lucky with the timing. Pages that consistently load fast
-        don't get much benefit from Suspense boundaries.
+        didn&apos;t notice it unless you were looking hard and got lucky with the timing. Pages that consistently load
+        fast don&apos;t get much benefit from Suspense boundaries.
       </p>
     </>
   );

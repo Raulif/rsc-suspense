@@ -18,8 +18,8 @@ export default async function Devices() {
       </div>
       <DevicesTable devices={devices} />
       <p>
-        This screen does not use either a page-level or a component-level Suspense boundary, but it's so fast you didn't
-        notice
+        This screen does not use either a page-level or a component-level Suspense boundary, but it&apos;s so fast you
+        didn&apos;t notice
       </p>
     </>
   );
