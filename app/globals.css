@@ -18,12 +18,20 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+
+  a {
+    text-decoration: underline;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
 }
 
 @layer utilities {

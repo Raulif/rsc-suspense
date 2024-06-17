@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="relative isolate flex min-h-svh w-full flex-col bg-white">
+          <TopMenu />
+          <main className="flex flex-1 flex-col pb-2 lg:px-2">
+            <div className="grow p-6 lg:rounded-lg lg:bg-white lg:p-10 lg:shadow-sm lg:ring-1 lg:ring-zinc-950/5 dark:lg:bg-zinc-900 dark:lg:ring-white/10">
+              <div className="mx-auto max-w-6xl">{children}</div>
+            </div>
+          </main>
+        </div>
+      </body>
     </html>
+  );
+}
+
+function TopMenu() {
+  return (
+    <header className="flex items-left justify-start gap-4 px-4 py-2">
+      <NavLink href="/">Home</NavLink>
+
+      <NavLink href="/slow/no-suspense">Slow loading, no Suspense</NavLink>
+      <NavLink href="/slow/suspense">Slow loading, page-level Suspense</NavLink>
+      <NavLink href="/slow/component-suspense">Slow, component-level Suspense</NavLink>
+
+      <NavLink href="/fast/suspense">Fast loading, page-level Suspense</NavLink>
+      <NavLink href="/fast/no-suspense">Fast loading, no Suspense</NavLink>
+    </header>
+  );
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link className="border-blue-500 border rounded-md px-4 py-2 bg-slate-100 hover:bg-slate-400" href={href}>
+      {children}
+    </Link>
   );
 }
