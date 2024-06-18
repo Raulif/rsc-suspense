@@ -16,7 +16,7 @@ export default async function Devices() {
           <AddDeviceButton />
         </div>
       </div>
-      {devices.length ? <DevicesTable devices={devices} /> : null}
+      <DevicesTable devices={devices} />
       <p>
         This screen uses a page-level Suspense boundary (via loading.tsx), but the data loading is so fast you probably
         didn&apos;t notice it unless you were looking hard and got lucky with the timing. Pages that consistently load
