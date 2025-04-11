@@ -45,8 +45,6 @@ function TopMenu() {
       <NavLink href="/slow/suspense">Slow loading, page-level Suspense</NavLink>
       <NavLink href="/slow/component-suspense">Slow, component-level Suspense</NavLink>
 
-      <NavLink href="/fast/suspense">Fast loading, page-level Suspense</NavLink>
-      <NavLink href="/fast/no-suspense">Fast loading, no Suspense</NavLink>
     </header>
   );
 }

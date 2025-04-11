@@ -24,22 +24,6 @@ export default function Home() {
         </li>
       </ul>
 
-      <p>
-        And here are a couple of fast-loading pages for good measure. When we know our RSC pages are very fast to
-        render, we can get away with{" "}
-        <a href="https://edspencer.net/2024/06/18/understanding-react-server-components-and-suspense">
-          not thinking about async RSC behaviors or Suspense
-        </a>
-        .
-      </p>
-      <ul>
-        <li>
-          <a href="/fast/no-suspense">Fast page with no Suspense</a>
-        </li>
-        <li>
-          <a href="/fast/suspense">Fast page with Suspense</a>
-        </li>
-      </ul>
     </div>
   );
 }
