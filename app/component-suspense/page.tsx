@@ -1,7 +1,6 @@
 import { getDevices } from "@/models/device";
 
 import Heading from "@/components/common/heading";
-import DevicesTable from "@/components/device/table";
 import AddDeviceButton from "@/components/device/button";
 
 import Loading from "@/components/common/loading";
@@ -30,5 +29,6 @@ export default function Devices() {
 async function LoadedDevicesTable() {
   const devices = await getDevices();
 
-  return <DevicesTable devices={devices} />;
+  return <p>{devices.length || 'no length yet'}</p>;
 }
+

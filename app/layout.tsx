@@ -18,7 +18,7 @@ export default function RootLayout({
   //we don't actually care about headers, this is just to get Next JS to treat all of our pages as
   //dynamic. Otherwise, when we create a production build all of our pages will be statically generated
   //and the demo won't show anything as it will all just load instantly as static HTML.
-  // const pageHeaders = headers();
+  const pageHeaders = headers();
 
   return (
     <html lang="en">
