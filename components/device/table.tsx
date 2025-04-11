@@ -1,3 +1,4 @@
+"use client";
 import { Table, TableHead, TableRow, TableHeader, TableBody, TableCell } from "../common/table";
 
 export default function DevicesTable({ devices }: { devices: any[] }) {
